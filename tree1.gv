@@ -1,0 +1,11 @@
+// SELECT [ ENAME = 'Mary' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT )
+digraph {
+	name [label="SELECT [ ENAME = 'Mary' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT )" shape=rectangle]
+	0 [label=" ENAME='Mary' and DNAME='Research'"]
+	1 [label="⋈"]
+	2 [label=EMPLOYEE]
+	3 [label=DEPARTMENT]
+		0 -> 1
+		1 -> 2
+		1 -> 3
+}

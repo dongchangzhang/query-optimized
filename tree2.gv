@@ -1,0 +1,13 @@
+// PROJECTION [ BDATE ] ( SELECT [ ENAME = 'John' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT ) )
+digraph {
+	name [label="PROJECTION [ BDATE ] ( SELECT [ ENAME = 'John' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT ) )" shape=rectangle]
+	0 [label=" BDATE"]
+	1 [label=" ENAME='John' and DNAME='Research'"]
+	2 [label="⋈"]
+	3 [label=EMPLOYEE]
+	4 [label=DEPARTMENT]
+		0 -> 1
+		1 -> 2
+		2 -> 3
+		2 -> 4
+}

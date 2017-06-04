@@ -1,0 +1,15 @@
+// 优化后 PROJECTION [ BDATE ] ( SELECT [ ENAME = 'John' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT ) )
+digraph {
+	name [label="优化后 PROJECTION [ BDATE ] ( SELECT [ ENAME = 'John' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT ) )" shape=rectangle]
+	0 [label=" BDATE"]
+	2 [label="⋈"]
+	5 [label=" ENAME='John'"]
+	6 [label=" DNAME='Research'"]
+	3 [label=EMPLOYEE]
+	4 [label=DEPARTMENT]
+		0 -> 2
+		2 -> 5
+		2 -> 6
+		5 -> 3
+		6 -> 4
+}

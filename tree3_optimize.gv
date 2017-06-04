@@ -1,0 +1,13 @@
+// 优化后 SELECT [ ESSN = '01' ] ( PROJECTION [ ESSN , PNAME ] ( WORKS_ON JOIN PROJECT ) )
+digraph {
+	name [label="优化后 SELECT [ ESSN = '01' ] ( PROJECTION [ ESSN , PNAME ] ( WORKS_ON JOIN PROJECT ) )" shape=rectangle]
+	1 [label=" ESSN ,PNAME"]
+	2 [label="⋈"]
+	4 [label=PROJECT]
+	5 [label=" ESSN='01'"]
+	3 [label=WORKS_ON]
+		1 -> 2
+		2 -> 4
+		2 -> 5
+		5 -> 3
+}
