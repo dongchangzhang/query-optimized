@@ -6,11 +6,11 @@
 SELECT [ ENAME = 'Mary' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT )
 ```
 查询树如下：
-![tree1]()
+![tree1](preview/1.png)
 
 
 优化后如下：
-![tree2]()
+![tree2](preview/2.png)
 ```sql
 PROJECTION [ BDATE ] ( SELECT [ ENAME = 'John' & DNAME = 'Research' ] ( EMPLOYEE JOIN DEPARTMENT ) )
 ```
